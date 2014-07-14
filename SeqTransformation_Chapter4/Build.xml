@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+	<property name="version" value="1.0" />
+
+	<property name="jar" value="build/tj-seqTrans-${version}.jar" />
+	<path id="classpath">
+		<pathelement location="${jar}" />
+	</path>
+	<target name="clean">
+		<echo>Inside the clean build</echo>
+		<delete dir="build" />
+	</target>
+	<target name="jar">
+		<echo> Inside the jar target</echo>
+		<mkdir dir="build/classes" />
+		<javac debug="yes" debuglevel="source,lines,vars" destdir="build/classes" includeantruntime="false">
+			<compilerarg value="-Xlint:all" />
+			<classpath refid="classpath" />
+			<src path="src/" />
+		</javac>
+		<jar destfile="${jar}">
+			<fileset dir="build/classes" includes="**/*.class" />
+		</jar>
+	</target>
+	<property name="filePath" value="boolStringInputFile.txt" />
+
+
+	<target name="SequenceTransformation" depends="jar">
+		<echo>Inside the Seq Transformation</echo>
+		<java classname="Main" classpath="${jar}" fork="true">
+			<arg value="${filePath}" />
+		</java>
+	</target>
+
+</project>

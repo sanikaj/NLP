@@ -56,9 +56,9 @@
     <mkdir dir="${xml.dir}"/>
     <java classname="com.colloquial.casestudy.GreatInventorParser"
            fork="true">
-   <!--      <jvmarg value="-Xdebug" />
+        <jvmarg value="-Xdebug" />
   	  <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5432" />
-  	 -->
+  	 
       <classpath refid="classpath"/>
       <arg value ="${etext}"/>
       <arg value ="${xml.dir}"/>

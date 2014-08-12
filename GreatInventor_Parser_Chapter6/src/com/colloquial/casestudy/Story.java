@@ -13,6 +13,38 @@ public class Story {
 	private final List<String> mParagraphs; // Paragraphs
 	int mNumber;
 
+	public String getAuthorName() {
+		return authorName;
+	}
+
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public int getmNumber() {
+		return mNumber;
+	}
+
+	public void setmNumber(int mNumber) {
+		this.mNumber = mNumber;
+	}
+
+	public List<String> getmParagraphs() {
+		return mParagraphs;
+	}
+
+	public Story() {
+		mParagraphs = new ArrayList<String>();
+	}
+	
 	public int getNumber() {
 		return mNumber;
 	}

@@ -14,9 +14,9 @@
 	<classpathentry kind="lib" path="lib/solr-solrj-4.5.1.jar"/>
 	<classpathentry kind="lib" path="webchars/lib/jdom-2.0.4.jar"/>
 	<classpathentry kind="lib" path="applucene/lib/lucene-analyzers-common-4.5.1.jar"/>
-	<classpathentry kind="lib" path="applucene/lib/lucene-core-4.5.1.jar"/>
+	<classpathentry kind="lib" path="applucene/lib/lucene-core-4.5.1.jar" sourcepath="lucene-core-4.9.0-sources.jar"/>
 	<classpathentry kind="lib" path="applucene/lib/lucene-misc-4.5.1.jar"/>
 	<classpathentry kind="lib" path="applucene/lib/lucene-queries-4.5.1.jar"/>
-	<classpathentry kind="lib" path="applucene/lib/lucene-queryparser-4.5.1.jar"/>
+	<classpathentry kind="lib" path="applucene/lib/lucene-queryparser-4.5.1.jar" sourcepath="C:/Users/sanika/Downloads/lucene-core-4.9.0-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

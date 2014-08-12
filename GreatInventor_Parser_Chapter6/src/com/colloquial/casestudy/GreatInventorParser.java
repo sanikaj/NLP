@@ -15,10 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 
+import org.apache.lucene.queryparser.classic.ParseException;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
+
+import com.colloquial.lucene_search.Searcher;
 
 public class GreatInventorParser {
 
@@ -30,7 +33,7 @@ public class GreatInventorParser {
 	static int count = 0;
 	boolean flag2 = true;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, ParseException {
 		if (args.length < 2) {
 			System.err.println("usage: GreatInventorParser "
 					+ "<etext> <outdir>");
@@ -58,6 +61,8 @@ public class GreatInventorParser {
             System.out.println("All stories processed.");
         }
 
+		Searcher searcher = new Searcher();
+		//searcher.searchDoco();
 	}
 
 	public void storyToXml(Story story, File outDir) {
